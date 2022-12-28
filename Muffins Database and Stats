@@ -1,0 +1,30 @@
+---Create a muffins in store database
+
+CREATE TABLE muffins (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER);
+INSERT INTO muffins VALUES (1, "Banana Walnuts",10, 1.50);
+INSERT INTO muffins VALUES (2, "Chocolate Chip",20, 2.00);
+INSERT INTO muffins VALUES (3, "Apple Cinnamon",15, 1.50);
+INSERT INTO muffins VALUES (4, "Strawberry CreamCheese",15, 2.50);
+INSERT INTO muffins VALUES (5, "Pistachio", 12, 3.00);
+INSERT INTO muffins VALUES (6, "Blueberry", 30, 3.00);
+INSERT INTO muffins VALUES (7, "Cranberry Orange", 20, 2.00);
+INSERT INTO muffins VALUES (8, "Eggs", 7, 1.00);
+INSERT INTO muffins VALUES (9, "CornBread", 15, 2.00);
+INSERT INTO muffins VALUES (10, "Coffe Cake", 25, 3.00);
+INSERT INTO muffins VALUES (11, "Red Velvet", 36, 3.50);
+INSERT INTO muffins VALUES (12, "Carrot Cake", 10, 3.00);
+INSERT INTO muffins VALUES (13, "Lemon Poppy Seed", 40, 3.50);
+INSERT INTO muffins VALUES (14, "Donut", 10, 1.50);
+INSERT INTO muffins VALUES (15, "Pumpkin Spice", 50, 3.00); 
+
+--display the database ordered by price
+SELECT * FROM muffins ORDER BY price desc;
+
+--what is the avg price of muffins? 
+SELECT AVG(price) "avg muffin price"
+FROM muffins
+
+--what are the quantities with more muffins? 
+SELECT name, quantity, price
+FROM muffins
+ORDER BY quantity DESC limit 6;
